@@ -1,0 +1,11 @@
+#!/bin/sh
+# current user is $3
+
+# remove the google extensions directory
+rm -rf "/Users/$3/Library/Application Support/Google/Chrome/Default/Extensions"
+
+# recreate the google extensions directory
+mkdir "/Users/$3/Library/Application Support/Google/Chrome/Default/Extensions"
+
+# change the permissions on the folder
+chmod -R 444 "/Users/$3/Library/Application Support/Google/Chrome/Default/Extensions"
